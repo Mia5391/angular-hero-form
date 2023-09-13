@@ -2,9 +2,12 @@
 <form #heroForm="ngForm">
     <div class="form-group">
         <label for="name">Hero Name</label>
-        <input type="text" class="form-control" id="name"
+        <input #name="ngModel" type="text" class="form-control" id="name"
             required
-            [(ngModel)]="model.name" name="name"></div>
+            [(ngModel)]="model.name" name="name">
+            <div [hidden]="name.valid || name.pristine" 
+            class="alert alert-danger"> Hero Name is required</div>
+        </div>
     <div class="form-group">
         <label for="alter-ego">Alter Ego</label>
         <input type="text" class="form-control" id="alter-ego"
