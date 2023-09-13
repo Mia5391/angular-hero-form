@@ -8,3 +8,7 @@ export class Hero {
 
     ) {}
 }
+
+const myHero =  new Hero(42, 'SkyDog',
+'Fetch any object at any distance',
+'Leslie Rollover');
